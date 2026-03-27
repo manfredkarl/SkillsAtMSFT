@@ -1,0 +1,58 @@
+title: Skills at MSFT
+description: >-
+  Hands-on workshop to get started with GitHub Copilot CLI, MCP integrations,
+  and skill creation in a structured, practical way.
+
+remote_theme: just-the-docs/just-the-docs
+
+url: "https://manfredkarl.github.io"
+baseurl: "/SkillsAtMSFT"
+
+color_scheme: light
+
+permalink: pretty
+
+search_enabled: true
+search.button: true
+
+heading_anchors: true
+
+nav_sort: case_insensitive
+
+aux_links:
+  "GitHub Repo":
+    - "https://github.com/manfredkarl/SkillsAtMSFT"
+aux_links_new_tab: true
+
+footer_content: >-
+  Built with ❤️ for the Microsoft community.
+  Powered by <a href="https://just-the-docs.com">Just the Docs</a>.
+
+gh_edit_link: true
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/manfredkarl/SkillsAtMSFT"
+gh_edit_branch: "main"
+gh_edit_view_mode: "edit"
+
+callouts:
+  warning:
+    title: "⚠️ Warning"
+    color: red
+  tip:
+    title: "💡 Tip"
+    color: green
+  note:
+    title: "📝 Note"
+    color: blue
+  important:
+    title: "❗ Important"
+    color: yellow
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
