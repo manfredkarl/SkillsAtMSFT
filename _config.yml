@@ -49,6 +49,7 @@ callouts:
     color: yellow
 
 plugins:
+  - jekyll-remote-theme
   - jekyll-seo-tag
 
 exclude:
