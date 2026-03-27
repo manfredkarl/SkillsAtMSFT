@@ -119,6 +119,41 @@ This is equivalent to `--allow-all-tools --allow-all-paths --allow-all-urls`, le
 
 ---
 
+## Managing Sessions
+
+Copilot CLI saves your conversation history as **sessions**, so you can pick up where you left off.
+
+### Resume a session
+
+```bash
+copilot --resume            # browse and pick from recent sessions
+copilot --continue          # jump straight into the most recent session
+copilot --resume SESSION-ID # resume a specific session by ID
+```
+
+Inside a running session you can also use the `/resume` slash command to switch sessions.
+
+### Rename a session
+
+By default, sessions get auto-generated names. Give yours a meaningful name:
+
+```
+/rename my-workshop-progress
+```
+
+This makes it easy to find later in the session picker.
+
+### Other useful session commands
+
+| Command | What it does |
+|:--------|:-------------|
+| `/session` | View current session info |
+| `/compact` | Summarize conversation to free up context window |
+| `/share` | Export session to markdown or GitHub Gist |
+| `/clear` | Abandon session and start fresh |
+
+---
+
 {: .tip }
 > **🎯 Try it yourself:** Start Copilot CLI and ask it to list all files in your current directory. Then ask it to explain what one of those files does. This confirms that both authentication and tool access are working correctly.
 
