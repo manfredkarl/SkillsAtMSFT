@@ -94,6 +94,10 @@ Use skill-creator to build a skill for generating release notes from commit hist
 Draft a skill for onboarding new team members to our codebase
 ```
 
+### Automatic Skill Discovery with `/skill`
+
+You don't always need to name a skill explicitly. In Copilot CLI, type `/skill` and Copilot will scan your installed skills and suggest the most relevant one for your current task. This is useful when you've installed several skills and aren't sure which one applies — just describe what you want to do and let Copilot match it.
+
 ---
 
 ## Explore More Skills

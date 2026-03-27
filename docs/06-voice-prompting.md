@@ -78,39 +78,6 @@ It's that simple. No cloud, no accounts, no subscriptions.
 
 ---
 
-## Example Voice Prompts
-
-Here are some prompts you might speak into Copilot CLI:
-
-| Voice Prompt | What Copilot Does |
-|:-------------|:------------------|
-| *"Show me all TODO comments in the repository"* | Searches codebase for TODOs |
-| *"Generate unit tests for the function in utils/file.js"* | Creates test file |
-| *"Use the skill-creator to draft a new skill for formatting Markdown"* | Invokes the skill-creator |
-| *"What did I plan for today's meeting? Summarize my daily note in Obsidian"* | Queries Obsidian via MCP |
-| *"Check the status of my MCP servers"* | Runs `/mcp status` |
-| *"What are my top opportunities closing this quarter?"* | Queries MSX CRM via MCP |
-| *"Summarize my unread emails from today"* | Queries WorkIQ |
-
----
-
-## Supported Models
-
-Handy supports multiple transcription models:
-
-| Model | Speed | Accuracy | Hardware Needed |
-|:------|:------|:---------|:----------------|
-| **Whisper Small** | ⚡ Fast | Good | Any modern CPU |
-| **Whisper Medium** | ⚡ Moderate | Better | 8 GB+ RAM recommended |
-| **Whisper Turbo** | ⚡ Fast | Better | Optimized for real-time |
-| **Whisper Large** | 🐢 Slower | Best | GPU recommended |
-| **Parakeet V3** | ⚡ Fast | Good | Efficient on CPU |
-
-{: .tip }
-> If you have a GPU, enable GPU acceleration in Handy's settings for near-instant transcription with the Large model.
-
----
-
 ## Troubleshooting
 
 | Problem | Solution |

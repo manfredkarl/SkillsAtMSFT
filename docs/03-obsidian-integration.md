@@ -3,127 +3,70 @@ title: 3. Integrate Obsidian
 nav_order: 3
 ---
 
-# Integrating Note-Taking with Obsidian
+# Using Copilot CLI with Obsidian
 {: .fs-8 }
 
-Use a local markdown note-taking app to record insights and context for your Copilot sessions.
+Your Obsidian vault is just a folder of markdown files — which means Copilot CLI can read, search, and write to it directly.
 {: .fs-5 .fw-300 }
 
-⏱️ **Estimated time: 5–10 minutes**
-
-A great AI workflow captures context and decisions as you go. In this module you'll connect Copilot CLI to Obsidian — a local-first markdown editor — so Copilot can read your notes, manage your tasks, and help you build a personal knowledge base without anything leaving your machine.
+⏱️ **Estimated time: 5 minutes**
 
 ---
 
-## Why Obsidian?
+## What Is Obsidian?
 
-[Obsidian](https://obsidian.md/) is a powerful, privacy-first markdown editor that stores all your notes as plain `.md` files on your local disk. Combined with Copilot, it becomes an AI-augmented knowledge base where you can:
-
-- **Search across hundreds of notes** using natural language instead of keywords
-- **Auto-generate daily summaries** from meeting notes and tasks
-- **Build linked knowledge graphs** with AI-assisted connections between topics
-- **Keep everything private** — no cloud dependency unless you choose to sync
+[Obsidian](https://obsidian.md/) is a local-first markdown note-taking app. Your notes live in a **vault**, which is just a regular folder of `.md` files on your computer. No cloud account required, no proprietary format — just plain text files organized however you like.
 
 ---
 
-## Setup Obsidian + Copilot
+## Why It Works So Well with Copilot CLI
+
+Copilot CLI can read and write any file on your machine. Since an Obsidian vault is just a folder of markdown files, Copilot can:
+
+- **Search your notes** — *"Find all notes mentioning Project Alpha"*
+- **Summarize content** — *"Summarize the key decisions from my meeting-notes folder"*
+- **Create new notes** — *"Create a note in my vault called 'Architecture Decisions' with…"*
+- **Update existing notes** — *"Add a section to my onboarding.md with the setup steps we just discussed"*
+
+No plugins or special configuration needed. Just point Copilot at your vault folder.
+
+---
+
+## Getting Started
 
 ### 1. Install Obsidian
 
-If you don't already have Obsidian, download it from [obsidian.md](https://obsidian.md/) — it's free for personal use. Create a vault (or open an existing one) in a folder you can easily find.
+Download from [obsidian.md](https://obsidian.md/) — it's free for personal use. Create a vault in a folder you can easily find (e.g., `~/Documents/Notes`).
 
-### 2. Install the Obsidian Copilot Plugin
+### 2. Use Copilot CLI with Your Vault
 
-1. Open Obsidian → **Settings** → **Community Plugins**
-2. Click **Browse** and search for **Copilot**
-3. Click **Install**, then **Enable**
-4. Configure the plugin settings — you may need to provide your GitHub token
-
-The plugin provides an in-vault AI assistant, allowing chat-based search of your notes and integration with Copilot's agents.
-
-{: .note }
-> **Community plugins disabled?** Go to **Settings → Community Plugins** and toggle off **Restricted Mode**. You'll see a warning — this is safe for trusted plugins like Copilot.
-
-### 3. Enable Daily Notes (Recommended)
-
-For the best experience, enable Obsidian's built-in **Daily Notes** plugin:
-
-1. Go to **Settings → Core Plugins**
-2. Enable **Daily Notes**
-3. Configure your preferred date format and template
-
-Daily notes give Copilot a natural place to log insights, action items, and session summaries.
-
----
-
-## Available CLI Tools
-
-Copilot's Obsidian integration adds CLI tools to access your vault (desktop only):
-
-| Tool | Description | Example Use |
-|:-----|:------------|:------------|
-| `obsidianDailyNote` | Read or append to today's daily note | Log meeting action items |
-| `obsidianTasks` | List all tasks across your vault | Review open to-dos |
-| `obsidianLinks` | List backlinks for a note | Discover related topics |
-
-You can use these directly in Copilot CLI after enabling them:
+Open Copilot CLI and reference files in your vault by path. For example:
 
 ```
-copilot> /tool obsidianDailyNote
-copilot> /tool obsidianTasks
+Summarize all the markdown files in ~/Documents/Notes/projects/
 ```
 
-{: .important }
-> **Obsidian must be running** on your desktop for these tools to work. The CLI communicates with Obsidian's local REST API, which is only active when the app is open.
+```
+Create a new note at ~/Documents/Notes/workshop-recap.md summarizing what I learned today
+```
 
----
-
-## Example Use Cases
-
-Keep your Obsidian vault open while working with Copilot. Try prompts like:
-
-- *"Summarize today's meeting notes and append a decision list"*
-- *"What tasks are still open in my vault?"*
-- *"Create a new note summarizing the architecture discussion"*
-- *"Find all notes related to Project Alpha and list the key decisions"*
-- *"Add a task to my daily note: Review PR #42 before EOD"*
-
-### A Typical Workflow
-
-1. **Morning:** Ask Copilot to read your daily note and summarize yesterday's open tasks
-2. **During meetings:** Dictate notes using Handy (Module 6) and let Copilot append them
-3. **After work:** Ask Copilot to generate a summary of the day and create tomorrow's task list
+```
+Search my vault at ~/Documents/Notes for anything related to "API design" and list the key points
+```
 
 {: .tip }
-> All notes remain local and private — nothing is sent to the cloud unless you explicitly choose to sync.
-
----
-
-## Troubleshooting
-
-| Problem | Solution |
-|:--------|:---------|
-| Tools return "connection refused" | Make sure Obsidian is running on your desktop |
-| Daily note not found | Enable the Daily Notes core plugin and create today's note |
-| Plugin not showing in search | Toggle off Restricted Mode in Community Plugins settings |
-| Copilot can't find your vault | Ensure your vault path is accessible — avoid network drives |
+> You can use the `git-explore` skill (Module 4) to deeply analyze any folder — including your Obsidian vault — and produce a structured summary.
 
 ---
 
 ## Alternatives
 
-Any markdown-based note app works similarly. Copilot CLI can edit any plaintext file via shell tools — for example:
-
-```bash
-code filename.md    # Open in VS Code
-```
-
-Other popular options include [Logseq](https://logseq.com/), [Notion](https://notion.so) (with API access), or even a simple folder of `.md` files. The key is having a structured place to capture context, decisions, and follow-ups as you work.
+Obsidian is just one option. Any markdown-based note system works the same way since Copilot CLI operates on plain files. [Logseq](https://logseq.com/), a plain folder of `.md` files, or even VS Code with markdown files all work. The key insight: **if it's a file on disk, Copilot CLI can work with it.**
 
 ---
 
 {: .tip }
-> **🎯 Try it yourself:** Open your Obsidian vault and create a daily note for today. Then ask Copilot CLI: *"Append a section called 'Workshop Notes' to my daily note with three things I've learned so far."* Verify the content appears in Obsidian.
+> **🎯 Try it yourself:** Point Copilot CLI at a folder of markdown files (your Obsidian vault or any notes folder) and ask: *"Read through these notes and create a summary of the main topics covered."*
 
 ---
 

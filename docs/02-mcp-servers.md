@@ -118,9 +118,6 @@ Add to your `~/.copilot/mcp-config.json`:
 {: .note }
 > Replace the path and tenant ID with your own values. Changes to CRM data will require human approval.
 
-{: .warning }
-> **Windows users:** Use double backslashes in JSON paths (e.g., `C:\\Users\\you\\msx-copilot-mcp\\...`) or use forward slashes instead.
-
 ### Example CRM Queries
 
 Once connected, try prompts like:
@@ -175,29 +172,6 @@ If you have custom scripts or APIs, define them similarly under MCP servers. For
 ```
 
 Custom tools can expose any functionality — database queries, internal APIs, file transformations, or webhook triggers. Each tool you define becomes callable by Copilot when relevant to a user's prompt.
-
----
-
-## Testing MCP Connections
-
-After adding servers, always verify they're connected. Use `/mcp status` in Copilot CLI (or check the MCP panel in VS Code) to confirm your servers are connected and healthy.
-
-You should see each server listed with a **connected** status and the number of available tools.
-
-### Troubleshooting
-
-{: .tip }
-> **Server shows "disconnected"?** Check these common causes:
-> - **Wrong path:** Ensure the `command` and `args` point to the correct executable. Use absolute paths.
-> - **Missing dependencies:** Run `npm install` in the server directory if it's a Node.js project.
-> - **Environment variables:** Make sure all required `env` values are set (e.g., tenant IDs, URLs).
-> - **Port conflicts:** For HTTP servers, verify the port isn't already in use.
-> - **Reload config:** After editing `mcp-config.json`, restart Copilot CLI or run `/mcp reload` to pick up changes.
-
----
-
-{: .tip }
-> **🎯 Try it yourself:** Configure the WorkIQ MCP server and ask Copilot *"What meetings do I have today?"*. If you don't have WorkIQ access, try adding the Power BI remote server and query one of your datasets using natural language.
 
 ---
 

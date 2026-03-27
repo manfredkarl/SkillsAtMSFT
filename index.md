@@ -37,17 +37,6 @@ This workshop walks you through everything you need to become productive with Gi
 
 ---
 
-## 🗺️ Workshop Outline
-
-```
-1. Install Copilot CLI (npm or brew)
-2. Authenticate / Run copilot login
-3. Run copilot --yolo (full permissions)
-4. Configure MCP servers (WorkIQ, MSX, PowerBI, etc.)
-5. Add first Agent Skill (skill-creator)
-6. Integrate Obsidian & enable Handy voice input
-```
-
 {: .note }
 > This guide is based on official documentation and the latest resources including
 > [GitHub Copilot CLI docs](https://docs.github.com/copilot/how-tos/set-up/install-copilot-cli),

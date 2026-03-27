@@ -73,7 +73,34 @@ table {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
-// Sidebar active item highlight
-.nav-list-item.active > .nav-list-link {
-  font-weight: 700;
+// Sidebar navigation readability fixes
+.nav-list .nav-list-item {
+  .nav-list-link {
+    color: #2d2d2d;
+    &:hover {
+      color: #7253ed;
+      background-color: #eeeafc;
+    }
+  }
+
+  // Active / selected page
+  &.active > .nav-list-link {
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #7253ed;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: darken(#7253ed, 8%);
+      color: #ffffff;
+    }
+  }
+
+  // Child links inside expanded active section
+  .nav-list .nav-list-link {
+    color: #4a4a4a;
+    &:hover {
+      color: #7253ed;
+    }
+  }
 }
