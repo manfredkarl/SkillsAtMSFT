@@ -1,7 +1,6 @@
 ---
 title: 1. Install & Authenticate
 nav_order: 1
-parent: null
 ---
 
 # Install & Authenticate Copilot CLI
