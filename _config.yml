@@ -8,7 +8,7 @@ remote_theme: just-the-docs/just-the-docs
 url: "https://manfredkarl.github.io"
 baseurl: "/SkillsAtMSFT"
 
-color_scheme: light
+color_scheme: purple
 
 permalink: pretty
 

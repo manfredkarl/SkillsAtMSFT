@@ -1,0 +1,79 @@
+// ──────────────────────────────────────
+// Custom CSS overrides for Skills at MSFT
+// ──────────────────────────────────────
+
+// Hero section gradient
+.main-content {
+  > h1:first-of-type {
+    background: linear-gradient(135deg, #7253ed 0%, #4f8cff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+// Rounder buttons
+.btn,
+.btn-primary {
+  border-radius: 8px !important;
+}
+
+.btn-primary {
+  background-color: #7253ed !important;
+  border-color: #7253ed !important;
+  &:hover {
+    background-color: darken(#7253ed, 8%) !important;
+    border-color: darken(#7253ed, 8%) !important;
+  }
+}
+
+// Subtle shadow on code blocks
+pre.highlight,
+div.highlighter-rouge {
+  box-shadow: 0 2px 8px rgba(114, 83, 237, 0.08);
+  border: 1px solid #e8e8ec;
+  border-radius: 8px;
+}
+
+code {
+  border-radius: 4px;
+}
+
+// Table zebra striping
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+
+  thead th {
+    background-color: #7253ed;
+    color: #ffffff;
+    font-weight: 600;
+    border-bottom: 2px solid darken(#7253ed, 10%);
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #f5f6fa;
+  }
+
+  tbody tr:hover {
+    background-color: #eeeafc;
+  }
+
+  td, th {
+    padding: 0.65rem 1rem;
+  }
+}
+
+// Callout styling polish
+.warning, .tip, .note, .important {
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+// Sidebar active item highlight
+.nav-list-item.active > .nav-list-link {
+  font-weight: 700;
+}
