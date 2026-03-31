@@ -32,7 +32,7 @@ When you ask Copilot to do something, it checks all installed skills and automat
 As your first skill, add the **Skill Creator** — a meta-skill that helps you build new skills. In your terminal, run:
 
 ```bash
-npx skills add vercel-labs/agent-skills --skill skill-creator
+npx skills add anthropics/skills --skill skill-creator
 ```
 
 You'll see output confirming the skill was downloaded and placed in your `.github/skills/` directory.
@@ -43,7 +43,7 @@ You'll see output confirming the skill was downloaded and placed in your `.githu
 ### What Just Happened?
 
 The `npx skills add` command:
-1. Fetched the `skill-creator` skill from the `vercel-labs/agent-skills` repository
+1. Fetched the `skill-creator` skill from the `anthropics/skills` repository
 2. Created a `.github/skills/skill-creator/` directory in your project
 3. Placed a `SKILL.md` file inside with instructions Copilot will follow
 
@@ -100,19 +100,37 @@ You don't always need to name a skill explicitly. In Copilot CLI, type `/skill` 
 
 ---
 
+## Organizing Your Skills
+
+Before you install a dozen skills, it's worth thinking about **where** they should live:
+
+- **Global skills** (`~/.copilot/skills/`) — Always available, in every project. Install with the `-g` flag. Great for personal productivity skills like daily standup prep, code review checklists, or your own debugging workflow.
+- **Project skills** (`.github/skills/`) — Travel with the repo. When a teammate clones the project, they get these skills automatically. Use for team-specific workflows, project coding standards, or CI/CD debugging tied to that pipeline.
+
+**A good rule of thumb:** *"Would I use this in every repo?"* → Global. *"Is this specific to how this team/project works?"* → Project.
+
+| Where | Path | Best for | Install flag |
+|:------|:-----|:---------|:-------------|
+| Global | `~/.copilot/skills/` | Personal productivity, always available | `npx skills add ... -g` |
+| Project | `.github/skills/` | Team workflows, shared via Git | `npx skills add ...` (default) |
+
+Deciding early saves you from reorganizing later — and keeps your team's skill setup clean and predictable.
+
+---
+
 ## Explore More Skills
 
 Browse and install additional skills:
 
 ```bash
 # List available skills in a repository
-npx skills add vercel-labs/agent-skills --list
+npx skills add anthropics/skills --list
 
 # Install a specific skill
-npx skills add vercel-labs/agent-skills --skill frontend-design
+npx skills add anthropics/skills --skill frontend-design
 
 # Install globally (available across all projects)
-npx skills add vercel-labs/agent-skills --skill skill-creator -g
+npx skills add anthropics/skills --skill skill-creator -g
 
 # Search for skills
 npx skills find "code review"

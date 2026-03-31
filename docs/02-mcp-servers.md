@@ -36,6 +36,14 @@ All MCP configuration lives in `~/.copilot/mcp-config.json` (for Copilot CLI) or
 
 WorkIQ provides access to your emails, calendar, Teams chats, and files from Microsoft 365.
 
+### Quick Install
+
+The quickest way to add WorkIQ is to just ask Copilot:
+
+> *"Install WorkIQ so I can access my emails and calendar"*
+
+Copilot will handle the setup for you. Alternatively, you can install it manually:
+
 ### Install the Plugin
 
 Run these commands in Copilot CLI:
@@ -86,41 +94,14 @@ After configuration, Copilot can query your Microsoft 365 context. Try prompts l
 
 ## MSX CRM (Dynamics 365)
 
-The `msx-copilot-mcp` server enables Copilot to read and write Dynamics 365 (CRM) data.
-
-### Setup
-
-1. Clone or obtain the MSX MCP server repository
-2. Install dependencies: `npm install`
-3. Start the server: `npm start`
-4. Verify it starts without errors — you should see a "listening" message
-
-### Configure MCP
-
-Add to your `~/.copilot/mcp-config.json`:
-
-```json
-{
-  "mcpServers": {
-    "msx-crm": {
-      "type": "stdio",
-      "command": "node",
-      "args": ["/absolute/path/to/msx-copilot-mcp/mcp-server/src/index.js"],
-      "env": {
-        "MSX_CRM_URL": "https://microsoftsales.crm.dynamics.com",
-        "MSX_TENANT_ID": "<your-tenant-id>"
-      }
-    }
-  }
-}
-```
+The [MSX Copilot MCP server](https://github.com/ADS-AI-Projects/msx-copilot-mcp) connects Copilot to Dynamics 365 (CRM) data — giving it access to accounts, opportunities, activities, and more from Microsoft Sales Experience.
 
 {: .note }
-> Replace the path and tenant ID with your own values. Changes to CRM data will require human approval.
+> **Advanced integration:** MSX CRM requires additional setup outside this workshop (cloning the server repo, configuring tenant credentials, and running a local Node.js process). See the [msx-copilot-mcp repository](https://github.com/ADS-AI-Projects/msx-copilot-mcp) for full installation instructions.
 
-### Example CRM Queries
+### What It Enables
 
-Once connected, try prompts like:
+Once configured, Copilot can query and update your CRM data with prompts like:
 
 - *"Show me the top 5 opportunities closing this quarter"*
 - *"What's the latest activity on the Contoso account?"*

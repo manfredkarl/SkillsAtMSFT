@@ -19,6 +19,50 @@ Your Obsidian vault is just a folder of markdown files — which means Copilot C
 
 ---
 
+## What a Vault Looks Like
+
+A vault is just a folder. You organize it however makes sense to you — by project, by date, by topic. Here's a typical structure:
+
+```
+My-Vault/
+├── Daily/
+│   ├── 2026-03-27.md
+│   └── 2026-03-28.md
+├── Projects/
+│   ├── Project-Alpha.md
+│   └── Architecture-Decisions.md
+├── Meeting-Notes/
+│   └── 2026-03-27-Sprint-Review.md
+└── Templates/
+    └── meeting-template.md
+```
+
+There's no magic here — every note is a `.md` file, every folder is a regular directory. That's exactly what makes it so powerful with Copilot CLI. You can say *"read everything in my Meeting-Notes folder"* and it just works.
+
+---
+
+## Key Obsidian Features That Matter
+
+Obsidian isn't just a text editor — it has a few features that turn a pile of markdown files into a connected knowledge system:
+
+**[[Links]]** — You link notes together with `[[double brackets]]`. This creates a web of connected knowledge rather than isolated documents. When you write `[[Project-Alpha]]` in your meeting notes, Obsidian creates a clickable connection between the two — and Copilot can follow these references to understand how your ideas relate.
+
+**Tags** — Use `#tags` to categorize notes (e.g., `#architecture`, `#decision`, `#follow-up`). Tags make it easy to find and filter notes later, and Copilot can search for them across your entire vault.
+
+**Graph View** — Obsidian can visualize your notes as an interactive graph of connections. Nodes are notes, edges are links between them. It's a genuinely beautiful way to see how your knowledge connects — and often reveals relationships you didn't realize were there.
+
+**Everything is plain text** — Your notes are standard markdown files on your filesystem. No vendor lock-in, no proprietary database, no subscription required to access your own writing. If you stop using Obsidian tomorrow, your notes are still right there as `.md` files.
+
+---
+
+## Why It's Great for Knowledge Management
+
+Here's the real unlock: **Obsidian gives your knowledge structure, and Copilot CLI gives it intelligence.**
+
+Build a personal knowledge base that Copilot can search, summarize, and enrich. Meeting notes, architecture decisions, code snippets, project context — all in one searchable place. Since everything is just markdown files in a folder, Copilot CLI can read, create, update, and search them naturally without any plugins or APIs. Ask it to pull insights across dozens of notes, draft a new document from existing context, or connect ideas you hadn't linked yet. It's the difference between *having* notes and *using* them.
+
+---
+
 ## Why It Works So Well with Copilot CLI
 
 Copilot CLI can read and write any file on your machine. Since an Obsidian vault is just a folder of markdown files, Copilot can:

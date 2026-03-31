@@ -90,13 +90,6 @@ On first launch, the CLI will prompt you to log in with your GitHub account:
 2. **Workspace trust** — Copilot will ask you to confirm that you trust the current workspace. Approve to allow file access.
 3. **Ready to go** — You'll see a welcome message confirming you're logged in. You can start prompting immediately.
 
-{: .note }
-> **Alternative: Token-based auth.** If browser-based login isn't possible (e.g., headless servers), set the `COPILOT_GITHUB_TOKEN`, `GH_TOKEN`, or `GITHUB_TOKEN` environment variable with a [fine-grained personal access token](https://github.com/settings/personal-access-tokens/new) that has the **Copilot Requests** permission:
-> ```bash
-> export GH_TOKEN=github_pat_your_token_here         # macOS/Linux
-> $env:GH_TOKEN = "github_pat_your_token_here"        # PowerShell
-> ```
-
 ---
 
 ## Allow Autonomy (`--yolo`)

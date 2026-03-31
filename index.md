@@ -18,7 +18,7 @@ Master GitHub Copilot CLI, MCP integrations, and custom skill creation — from 
 {: .important }
 > **Prerequisites** — Before you begin, make sure you have:
 > - A **GitHub account** with Copilot access (Individual, Business, or Enterprise)
-> - **Node.js 18+** installed (`node --version`)
+> - **Node.js 22+** installed (`node --version`)
 > - A terminal you're comfortable with (PowerShell, Bash, or Zsh)
 > - ~60 minutes of uninterrupted time
 
