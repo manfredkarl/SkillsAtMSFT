@@ -34,6 +34,7 @@ This workshop walks you through everything you need to become productive with Gi
 | 🧩 4 | [Install Your First Skill]({{ site.baseurl }}/docs/04-first-skill) | Add agent skills from skills.sh |
 | 🛠️ 5 | [Create Custom Skills]({{ site.baseurl }}/docs/05-custom-skills) | Write your own SKILL.md files |
 | 🎙️ 6 | [Voice Prompting with Handy]({{ site.baseurl }}/docs/06-voice-prompting) | Speak your commands instead of typing |
+| 📚 7 | [Resources & Skill Repos]({{ site.baseurl }}/docs/07-resources) | Curated skill repositories and links |
 
 ---
 

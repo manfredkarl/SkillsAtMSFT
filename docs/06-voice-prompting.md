@@ -133,4 +133,4 @@ Congratulations! You've completed the full workshop. Here's what you've accompli
 ---
 
 [← Previous: Create Custom Skills]({{ site.baseurl }}/docs/05-custom-skills){: .btn .mr-2 }
-[Back to Home]({{ site.baseurl }}/){: .btn .btn-primary }
+[Next: Resources & Skill Repos →]({{ site.baseurl }}/docs/07-resources){: .btn .btn-primary }
