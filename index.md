@@ -4,11 +4,8 @@ layout: home
 nav_order: 0
 ---
 
-# 🚀 GitHub Copilot CLI Workshop Handbook
+# 🚀 Getting started with Copilot, WorkIQ, MCPs, skills and more…
 {: .fs-9 }
-
-Getting started with Copilot, WorkIQ, MCPs, skills and more...
-{: .fs-6 .fw-300 }
 
 [Get Started →]({{ site.baseurl }}/docs/01-install-authenticate){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [View on GitHub](https://github.com/manfredkarl/SkillsAtMSFT){: .btn .fs-5 .mb-4 .mb-md-0 }
