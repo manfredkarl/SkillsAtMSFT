@@ -1,6 +1,6 @@
 ---
-title: 5. Voice Prompting
-nav_order: 5
+title: 5. Local Transcription
+nav_order: 6
 ---
 
 # Voice-Driven Prompting with Handy
@@ -132,5 +132,5 @@ Congratulations! You've completed the full workshop. Here's what you've accompli
 
 ---
 
-[← Previous: Agent Skills]({{ site.baseurl }}/docs/04-first-skill){: .btn .mr-2 }
-[Next: Resources & Skill Repos →]({{ site.baseurl }}/docs/06-resources){: .btn .btn-primary }
+[← Previous: Resources & Skill Repos]({{ site.baseurl }}/docs/06-resources){: .btn .mr-2 }
+[Back to Home]({{ site.baseurl }}/){: .btn .btn-primary }

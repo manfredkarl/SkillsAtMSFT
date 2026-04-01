@@ -1,6 +1,6 @@
 ---
-title: 6. Resources & Skill Repos
-nav_order: 6
+title: 5. Resources & Skill Repos
+nav_order: 5
 ---
 
 # Resources & Skill Repos
@@ -77,5 +77,5 @@ npx skills find "code review"
 
 ---
 
-[← Previous: Voice Prompting]({{ site.baseurl }}/docs/05-voice-prompting){: .btn .mr-2 }
-[Back to Home]({{ site.baseurl }}/){: .btn .btn-primary }
+[← Previous: Agent Skills]({{ site.baseurl }}/docs/04-first-skill){: .btn .mr-2 }
+[Next: Local Transcription →]({{ site.baseurl }}/docs/05-voice-prompting){: .btn .btn-primary }
