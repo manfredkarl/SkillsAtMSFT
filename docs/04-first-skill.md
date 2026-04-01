@@ -116,16 +116,7 @@ Before you install a dozen skills, think about **where** they should live:
 
 ## Explore More Skills
 
-```bash
-# List available skills in a repository
-npx skills add anthropics/skills --list
-
-# Install globally (available across all projects)
-npx skills add anthropics/skills --skill pptx -g
-
-# Search for skills
-npx skills find "code review"
-```
+Check out the [Resources & Skill Repos]({{ site.baseurl }}/docs/06-resources) page for curated skill repositories from Anthropic, Vercel, and Microsoft.
 
 {: .tip }
 > **🎯 Try it yourself:** Use the skill-creator to build a `standup-prep` skill, then test it by asking Copilot: *"What did I work on yesterday?"*
