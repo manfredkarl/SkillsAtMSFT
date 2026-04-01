@@ -135,4 +135,4 @@ npx skills find "code review"
 ---
 
 [← Previous: Markdown Notebook]({{ site.baseurl }}/docs/03-obsidian-integration){: .btn .mr-2 }
-[Next: Voice Prompting with Handy →]({{ site.baseurl }}/docs/05-voice-prompting){: .btn .btn-primary }
+[Next: Resources & Skill Repos →]({{ site.baseurl }}/docs/06-resources){: .btn .btn-primary }

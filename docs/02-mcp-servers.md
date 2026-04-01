@@ -297,4 +297,4 @@ Access files and content from SharePoint and OneDrive — search across your org
 ---
 
 [← Previous: Install & Authenticate]({{ site.baseurl }}/docs/01-install-authenticate){: .btn .mr-2 }
-[Next: Integrate Obsidian →]({{ site.baseurl }}/docs/03-obsidian-integration){: .btn .btn-primary }
+[Next: Markdown Notebook →]({{ site.baseurl }}/docs/03-obsidian-integration){: .btn .btn-primary }
