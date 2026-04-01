@@ -30,7 +30,7 @@ This workshop walks you through everything you need to become productive with Gi
 |:--|:-------|:---------------|
 | ⚡ 1 | [Install & Authenticate]({{ site.baseurl }}/docs/01-install-authenticate) | Install Copilot CLI and authenticate with GitHub |
 | 🔌 2 | [Connect MCP Servers]({{ site.baseurl }}/docs/02-mcp-servers) | Wire up WorkIQ, MSX CRM, Power BI, and more |
-| 📓 3 | [.md Notetaking]({{ site.baseurl }}/docs/03-obsidian-integration) | Markdown notes with Obsidian |
+| 📓 3 | [Markdown Notebook]({{ site.baseurl }}/docs/03-obsidian-integration) | Markdown notes with Obsidian |
 | 🧩 4 | [Install Your First Skill]({{ site.baseurl }}/docs/04-first-skill) | Add agent skills from skills.sh |
 | 🛠️ 5 | [Create Custom Skills]({{ site.baseurl }}/docs/05-custom-skills) | Write your own SKILL.md files |
 | 🎙️ 6 | [Voice Prompting with Handy]({{ site.baseurl }}/docs/06-voice-prompting) | Speak your commands instead of typing |

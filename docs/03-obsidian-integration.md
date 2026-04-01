@@ -1,5 +1,5 @@
 ---
-title: 3. .md Notetaking
+title: 3. Markdown Notebook
 nav_order: 3
 ---
 
