@@ -127,3 +127,4 @@ Check out the [Resources & Skill Repos]({{ site.baseurl }}/docs/05-resources) pa
 
 [← Previous: Markdown Notebook]({{ site.baseurl }}/docs/03-obsidian-integration){: .btn .mr-2 }
 [Next: Resources & Skill Repos →]({{ site.baseurl }}/docs/05-resources){: .btn .btn-primary }
+

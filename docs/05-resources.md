@@ -71,3 +71,4 @@ A community-curated catalog for discovering and browsing Copilot skills. Search 
 
 [← Previous: Agent Skills]({{ site.baseurl }}/docs/04-first-skill){: .btn .mr-2 }
 [Next: Local Transcription →]({{ site.baseurl }}/docs/06-local-transcription){: .btn .btn-primary }
+

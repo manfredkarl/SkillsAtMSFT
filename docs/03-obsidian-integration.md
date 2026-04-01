@@ -120,3 +120,4 @@ Obsidian is just one option. Any markdown-based note system works the same way s
 
 [← Previous: Connect MCP Servers]({{ site.baseurl }}/docs/02-mcp-servers){: .btn .mr-2 }
 [Next: Agent Skills →]({{ site.baseurl }}/docs/04-first-skill){: .btn .btn-primary }
+

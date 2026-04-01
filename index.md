@@ -40,3 +40,4 @@ This workshop walks you through everything you need to become productive with Gi
 > [WorkIQ](https://github.com/microsoft/work-iq-mcp), and
 > [skills.sh](https://skills.sh).
 > Security considerations (especially when using `--yolo`) are highlighted throughout.
+

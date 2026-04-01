@@ -181,3 +181,4 @@ Copilot CLI saves your conversation history as **sessions** and has handy slash 
 ---
 
 [Next: Connect MCP Servers →]({{ site.baseurl }}/docs/02-mcp-servers){: .btn .btn-primary }
+
