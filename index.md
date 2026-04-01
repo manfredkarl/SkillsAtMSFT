@@ -7,7 +7,7 @@ nav_order: 0
 # 🚀 GitHub Copilot CLI Workshop Handbook
 {: .fs-9 }
 
-Master GitHub Copilot CLI, MCP integrations, and custom skill creation — from zero to productive in one hands-on workshop.
+Getting started with Copilot, WorkIQ, MCPs, skills and more...
 {: .fs-6 .fw-300 }
 
 [Get Started →]({{ site.baseurl }}/docs/01-install-authenticate){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
