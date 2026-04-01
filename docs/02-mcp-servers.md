@@ -176,9 +176,14 @@ Query your Power BI semantic models using plain English. Ask questions about rev
 
 These Agent365 servers give Copilot direct access to Microsoft 365 services via Microsoft Graph. They work for all Microsoft employees.
 
-### Agent365 Mail
+{: .note }
+> **Setup:** Add any of these to `.vscode/mcp.json` in your repo root. The `tenant_id` input will prompt you on first use — use your corporate Microsoft Entra tenant GUID.
 
-Send, receive, and search emails directly from Copilot. Great for drafting responses, summarizing threads, or finding attachments.
+---
+
+### 📧 Agent365 Mail
+
+Send, receive, and search emails directly from Copilot. Great for drafting responses, summarizing threads, or finding attachments without leaving your terminal.
 
 - *"Draft a reply to the latest email from Sarah about the Q2 budget"*
 - *"Find all emails with attachments from last week"*
@@ -190,9 +195,11 @@ Send, receive, and search emails directly from Copilot. Great for drafting respo
 }
 ```
 
-### Agent365 Teams
+---
 
-Read and send Teams messages. Useful for catching up on channels or posting updates.
+### 💬 Agent365 Teams
+
+Read and send Teams messages. Useful for catching up on channels you missed or posting updates without context-switching.
 
 - *"Summarize what was discussed in the #project-alpha channel today"*
 - *"Post a status update to my team's general channel"*
@@ -204,9 +211,11 @@ Read and send Teams messages. Useful for catching up on channels or posting upda
 }
 ```
 
-### Agent365 Calendar
+---
 
-Manage your calendar — check availability, create meetings, and review upcoming events.
+### 📅 Agent365 Calendar
+
+Manage your calendar — check availability, create meetings, and review upcoming events. Especially powerful combined with WorkIQ for automated meeting prep.
 
 - *"What's my schedule for tomorrow?"*
 - *"Find a 30-minute slot with Jessica and Tom next week"*
@@ -218,9 +227,11 @@ Manage your calendar — check availability, create meetings, and review upcomin
 }
 ```
 
-### Agent365 Word
+---
 
-Read and work with Word documents stored in OneDrive or SharePoint.
+### 📄 Agent365 Word
+
+Read and work with Word documents stored in OneDrive or SharePoint. Let Copilot extract key information from long documents so you don't have to read them yourself.
 
 - *"Summarize the executive summary from the Q1 strategy doc"*
 - *"Extract the action items from the meeting minutes document"*
@@ -232,9 +243,11 @@ Read and work with Word documents stored in OneDrive or SharePoint.
 }
 ```
 
-### Agent365 SharePoint
+---
 
-Access files and content from SharePoint and OneDrive — search, read, and organize.
+### 📂 Agent365 SharePoint
+
+Access files and content from SharePoint and OneDrive — search across your org's shared resources, find documents, and browse folder structures.
 
 - *"Find the latest version of the partner onboarding deck on SharePoint"*
 - *"List all files in our team's shared project folder"*
@@ -245,9 +258,6 @@ Access files and content from SharePoint and OneDrive — search, read, and orga
   "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_ODSPRemoteServer"
 }
 ```
-
-{: .note }
-> **Setup:** Add these to `.vscode/mcp.json` in your repo root. The `tenant_id` input will prompt you on first use — use your corporate Microsoft Entra tenant GUID.
 
 ---
 
