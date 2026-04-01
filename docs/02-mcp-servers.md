@@ -131,12 +131,7 @@ Walk into every customer meeting fully briefed. Copilot cross-references your ca
 
 ## MSX CRM (Dynamics 365)
 
-The [MSX Copilot MCP server](https://github.com/ADS-AI-Projects/msx-copilot-mcp) connects Copilot to Dynamics 365 (CRM) data — giving it access to accounts, opportunities, activities, and more from Microsoft Sales Experience.
-
-{: .note }
-> **Advanced integration:** MSX CRM requires additional setup outside this workshop (cloning the server repo, configuring tenant credentials, and running a local Node.js process). See the [msx-copilot-mcp repository](https://github.com/ADS-AI-Projects/msx-copilot-mcp) for full installation instructions.
-
-### What It Enables
+The MSX CRM server connects Copilot to Dynamics 365 — giving it access to accounts, opportunities, activities, and pipeline data from Microsoft Sales Experience.
 
 Once configured, Copilot can query and update your CRM data with prompts like:
 
@@ -146,50 +141,83 @@ Once configured, Copilot can query and update your CRM data with prompts like:
 
 ---
 
-## Power BI (Remote MCP)
+## Full MCP Configuration
 
-Add the remote Power BI server for natural-language queries against your semantic models:
+Below is a complete `.vscode/mcp.json` you can drop into your repo root. It includes all the servers we've covered plus additional Agent365 connectors for Mail, Teams, Calendar, Word, and SharePoint.
 
 ```json
 {
-  "mcpServers": {
+  "servers": {
+    "workiq": {
+      "command": "npx",
+      "args": ["-y", "@microsoft/workiq", "mcp"],
+      "type": "stdio"
+    },
+    "msx-crm": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["mcp/msx/src/index.js"],
+      "env": {
+        "MSX_CRM_URL": "https://microsoftsales.crm.dynamics.com",
+        "MSX_TENANT_ID": "${input:tenant_id}"
+      }
+    },
+    "oil": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["scripts/oil-start.js"]
+    },
     "powerbi-remote": {
       "type": "http",
       "url": "https://api.fabric.microsoft.com/v1/mcp/powerbi"
+    },
+    "agent365-mail": {
+      "type": "http",
+      "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_MailTools"
+    },
+    "agent365-teamsserver": {
+      "type": "http",
+      "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_TeamsServer"
+    },
+    "agent365-calendartools": {
+      "type": "http",
+      "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_CalendarTools"
+    },
+    "agent365-wordserver": {
+      "type": "http",
+      "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_WordServer"
+    },
+    "agent365-sharepoint": {
+      "type": "http",
+      "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_ODSPRemoteServer"
     }
-  }
+  },
+  "inputs": [
+    {
+      "id": "tenant_id",
+      "type": "promptString",
+      "description": "Microsoft Entra tenant ID (GUID)"
+    }
+  ]
 }
 ```
 
-This allows Copilot to query Power BI datasets using plain English. For example:
+### Servers Included
 
-- *"What was total revenue by region last quarter?"*
-- *"Show me the trend of customer churn over the past 12 months"*
+| Server | What it does |
+|:-------|:-------------|
+| **WorkIQ** | M365 content search (meetings, chats, email, SharePoint) |
+| **MSX-CRM** | Dynamics 365 CRM read/write operations |
+| **OIL** | Obsidian Intelligence Layer (local knowledge vault) |
+| **Power BI Remote** | Fabric/Power BI semantic model queries |
+| **Agent365 Mail** | Send/receive email via Graph |
+| **Agent365 Teams** | Teams messaging and chat |
+| **Agent365 Calendar** | Calendar and meeting management |
+| **Agent365 Word** | Word document operations |
+| **Agent365 SharePoint** | SharePoint/OneDrive file operations |
 
 {: .note }
-> You must have access to at least one Power BI workspace and semantic model. The remote MCP server authenticates using your Microsoft Entra credentials.
-
-> **References:** [Remote Power BI MCP server](https://learn.microsoft.com/en-us/power-bi/developer/mcp/remote-mcp-server-get-started)
-
----
-
-## Custom MCP Tools
-
-If you have custom scripts or APIs, define them similarly under MCP servers. For example:
-
-```json
-{
-  "mcpServers": {
-    "my-custom-tool": {
-      "type": "stdio",
-      "command": "node",
-      "args": ["/path/to/my-tool/index.js"]
-    }
-  }
-}
-```
-
-Custom tools can expose any functionality — database queries, internal APIs, file transformations, or webhook triggers. Each tool you define becomes callable by Copilot when relevant to a user's prompt.
+> **Setup:** Place this as `.vscode/mcp.json` in your repo root. The `tenant_id` input will prompt you on first use — use your corporate Microsoft Entra tenant GUID.
 
 ---
 
