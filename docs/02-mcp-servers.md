@@ -53,9 +53,9 @@ Run these commands in Copilot CLI:
 /plugin install workiq@copilot-plugins
 ```
 
-### Configure MCP
+### Configure MCP (optional)
 
-Add WorkIQ to your MCP server settings (e.g., `~/.copilot/mcp-config.json` or VS Code `.vscode/mcp.json`):
+The plugin install above already sets up the connection. If you want to configure WorkIQ manually (e.g., for VS Code), add it to your MCP server settings (`~/.copilot/mcp-config.json` or `.vscode/mcp.json`):
 
 ```json
 {
