@@ -78,4 +78,4 @@ npx skills find "code review"
 ---
 
 [← Previous: Agent Skills]({{ site.baseurl }}/docs/04-first-skill){: .btn .mr-2 }
-[Next: Local Transcription →]({{ site.baseurl }}/docs/05-voice-prompting){: .btn .btn-primary }
+[Next: Local Transcription →]({{ site.baseurl }}/docs/06-local-transcription){: .btn .btn-primary }

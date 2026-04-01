@@ -29,8 +29,8 @@ This workshop walks you through everything you need to become productive with Gi
 | 🔌 2 | [Connect MCP Servers]({{ site.baseurl }}/docs/02-mcp-servers) | Wire up WorkIQ, MSX CRM, Power BI, and more |
 | 📓 3 | [Markdown Notebook]({{ site.baseurl }}/docs/03-obsidian-integration) | Markdown notes with Obsidian |
 | 🧩 4 | [Agent Skills]({{ site.baseurl }}/docs/04-first-skill) | Install & create skills with skill-creator |
-| 📚 5 | [Resources & Skill Repos]({{ site.baseurl }}/docs/06-resources) | Curated skill repositories and links |
-| 🎙️ 6 | [Local Transcription]({{ site.baseurl }}/docs/05-voice-prompting) | Speak your commands instead of typing |
+| 📚 5 | [Resources & Skill Repos]({{ site.baseurl }}/docs/05-resources) | Curated skill repositories and links |
+| 🎙️ 6 | [Local Transcription]({{ site.baseurl }}/docs/06-local-transcription) | Speak your commands instead of typing |
 
 ---
 

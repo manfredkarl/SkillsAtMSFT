@@ -116,7 +116,7 @@ Before you install a dozen skills, think about **where** they should live:
 
 ## Explore More Skills
 
-Check out the [Resources & Skill Repos]({{ site.baseurl }}/docs/06-resources) page for curated skill repositories from Anthropic, Vercel, and Microsoft.
+Check out the [Resources & Skill Repos]({{ site.baseurl }}/docs/05-resources) page for curated skill repositories from Anthropic, Vercel, and Microsoft.
 
 {: .tip }
 > **🎯 Try it yourself:** Use the skill-creator to build a `standup-prep` skill, then test it by asking Copilot: *"What did I work on yesterday?"*
@@ -126,4 +126,4 @@ Check out the [Resources & Skill Repos]({{ site.baseurl }}/docs/06-resources) pa
 ---
 
 [← Previous: Markdown Notebook]({{ site.baseurl }}/docs/03-obsidian-integration){: .btn .mr-2 }
-[Next: Resources & Skill Repos →]({{ site.baseurl }}/docs/06-resources){: .btn .btn-primary }
+[Next: Resources & Skill Repos →]({{ site.baseurl }}/docs/05-resources){: .btn .btn-primary }
