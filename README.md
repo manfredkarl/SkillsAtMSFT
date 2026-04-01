@@ -1,27 +1,26 @@
-# Skills at MSFT — Workshop Guide
+# 🚀 IQ on Tap
 
 > 🌐 **Live site:** [manfredkarl.github.io/SkillsAtMSFT](https://manfredkarl.github.io/SkillsAtMSFT)
 
-A hands-on workshop to get started with GitHub Copilot CLI, MCP integrations, and skill creation in a structured, practical way.
+Getting started with Copilot, WorkIQ, MCPs, skills and more - a hands-on workshop guide from zero to productive.
 
-## Workshop Modules
+## What's Inside
 
-1. **Install & Authenticate** — Set up Copilot CLI
-2. **Connect MCP Servers** — WorkIQ, MSX CRM, Power BI
-3. **Integrate Obsidian** — Note-taking workflow
-4. **Install Your First Skill** — Agent skills from skills.sh
-5. **Create Custom Skills** — Write your own SKILL.md files
-6. **Voice Prompting** — Hands-free with Handy
+| # | Module | What You'll Learn |
+|---|--------|-------------------|
+| 1 | **Install & Authenticate** | Set up Copilot CLI, authenticate, pick your model |
+| 2 | **Connect MCP Servers** | WorkIQ, MSX CRM, Power BI, Agent365 (Mail, Teams, Calendar, Word, SharePoint) |
+| 3 | **Markdown Notebook** | Use Obsidian as your AI-powered knowledge base |
+| 4 | **Agent Skills** | Install the skill-creator and build your first custom skill |
+| 5 | **Resources & Skill Repos** | Curated repos from Anthropic, Vercel, and Microsoft |
+| 6 | **Local Transcription** | Voice-driven prompting with Handy |
 
-## Development
+## Quick Start
 
-This site uses [Jekyll](https://jekyllrb.com/) with the [Just the Docs](https://just-the-docs.com/) theme and deploys automatically to GitHub Pages via GitHub Actions.
+1. Visit the [live site](https://manfredkarl.github.io/SkillsAtMSFT)
+2. Follow the modules in order
+3. You'll be up and running in ~60 minutes
 
-To run locally:
+## Contributing
 
-```bash
-bundle install
-bundle exec jekyll serve
-```
-
-Then visit `http://localhost:4000/SkillsAtMSFT/`.
+Found something wrong or want to add content? Every page has an "Edit this page on GitHub" link at the bottom - PRs welcome.
