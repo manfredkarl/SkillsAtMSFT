@@ -1,6 +1,6 @@
 ---
-title: 6. Voice Prompting
-nav_order: 6
+title: 5. Voice Prompting
+nav_order: 5
 ---
 
 # Voice-Driven Prompting with Handy
@@ -132,5 +132,5 @@ Congratulations! You've completed the full workshop. Here's what you've accompli
 
 ---
 
-[← Previous: Create Custom Skills]({{ site.baseurl }}/docs/05-custom-skills){: .btn .mr-2 }
-[Next: Resources & Skill Repos →]({{ site.baseurl }}/docs/07-resources){: .btn .btn-primary }
+[← Previous: Agent Skills]({{ site.baseurl }}/docs/04-first-skill){: .btn .mr-2 }
+[Next: Resources & Skill Repos →]({{ site.baseurl }}/docs/06-resources){: .btn .btn-primary }

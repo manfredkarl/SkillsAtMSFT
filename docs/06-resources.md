@@ -1,6 +1,6 @@
 ---
-title: 7. Resources & Skill Repos
-nav_order: 7
+title: 6. Resources & Skill Repos
+nav_order: 6
 ---
 
 # Resources & Skill Repos
@@ -77,5 +77,5 @@ npx skills find "code review"
 
 ---
 
-[← Previous: Voice Prompting]({{ site.baseurl }}/docs/06-voice-prompting){: .btn .mr-2 }
+[← Previous: Voice Prompting]({{ site.baseurl }}/docs/05-voice-prompting){: .btn .mr-2 }
 [Back to Home]({{ site.baseurl }}/){: .btn .btn-primary }

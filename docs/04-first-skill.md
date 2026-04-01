@@ -1,35 +1,33 @@
 ---
-title: 4. Install Your First Skill
+title: 4. Agent Skills
 nav_order: 4
 ---
 
-# Installing Your First Agent Skill
+# Agent Skills — Install & Create
 {: .fs-8 }
 
-Agent Skills are reusable instructions that teach Copilot to perform specialized tasks. Install your first one in seconds.
+Install the skill-creator, then use it right away to build your first custom skill.
 {: .fs-5 .fw-300 }
 
-⏱️ **Estimated time: 5 minutes**
+⏱️ **Estimated time: 10–15 minutes**
 
-Skills are what make Copilot truly customizable. Instead of writing the same complex prompts over and over, you package them into reusable skill files that Copilot loads automatically. In this module you'll install your first skill and see how it changes what Copilot can do.
+Skills are what make Copilot truly customizable. Instead of writing the same complex prompts over and over, you package them into reusable skill files (`SKILL.md`) that Copilot loads automatically. In this module you'll install the skill-creator and immediately put it to work.
 
 ---
 
 ## What Are Agent Skills?
 
-Skills are structured instruction files (`SKILL.md`) that give Copilot domain-specific capabilities. Think of them as **expert playbooks** — each skill teaches Copilot a specific workflow with step-by-step instructions. They can be:
+Skills are structured instruction files that give Copilot domain-specific capabilities. Think of them as **expert playbooks** — each skill teaches Copilot a specific workflow. They can be:
 
-- **Installed from the community** via [skills.sh](https://skills.sh) — a growing marketplace of pre-built skills
-- **Created custom** for your team or project (covered in the next module)
+- **Installed from the community** via [skills.sh](https://skills.sh)
+- **Created custom** for your team using the skill-creator
 - **Shared** across repositories and teams via Git
-
-When you ask Copilot to do something, it checks all installed skills and automatically uses the most relevant one based on its description. You can also invoke skills explicitly by name.
 
 ---
 
 ## Install the Skill Creator
 
-As your first skill, add the **Skill Creator** — a meta-skill that helps you build new skills. Run this in your terminal or paste it directly into GitHub Copilot CLI:
+Run this in your terminal or paste it directly into GitHub Copilot CLI:
 
 ```bash
 npx skills add anthropics/skills --skill skill-creator
@@ -37,125 +35,104 @@ npx skills add anthropics/skills --skill skill-creator
 
 You'll see output confirming the skill was downloaded and placed in your `.github/skills/` directory.
 
-{: .note }
-> This downloads the skill definitions into Copilot's skills folder. Browse more skills at [skills.sh](https://skills.sh).
-
-### What Just Happened?
-
-The `npx skills add` command:
-1. Fetched the `skill-creator` skill from the `anthropics/skills` repository
-2. Created a `.github/skills/skill-creator/` directory in your project
-3. Placed a `SKILL.md` file inside with instructions Copilot will follow
-
----
-
-## Verify Installation
-
-In Copilot CLI, check your installed skills:
+### Verify Installation
 
 ```
 /skills list
 ```
 
-Or simply ask:
-
-```
-What skills do you have?
-```
-
-You should see `skill-creator` in the list along with any built-in skills.
+You should see `skill-creator` in the list. You can also type `/skill` and Copilot will auto-suggest relevant installed skills.
 
 {: .warning }
-> **Skill not showing up?** Make sure you ran the install command from the root of a Git repository. Skills are stored in `.github/skills/` relative to your project root. If you installed from a different directory, Copilot won't find them.
+> **Skill not showing up?** Make sure you ran the install command from the root of a Git repository. Skills are stored in `.github/skills/` relative to your project root.
 
 ---
 
-## Use the Skill
+## Create Your First Skill
 
-To invoke Skill Creator, prompt Copilot with it. For example:
-
-```
-Use the skill-creator to draft a new skill for automating GitHub issue triage.
-```
-
-Copilot will follow the Skill Creator instructions to scaffold a new skill for you, including the YAML frontmatter, a clear description, and step-by-step instructions.
-
-### More Invocation Examples
+Now let's use the skill-creator right away. Here's a practical example — creating a skill that prepares daily stand-up summaries:
 
 ```
-Create a skill that reviews pull requests for security issues
+Use the skill-creator to create a new skill called "standup-prep" that
+prepares a daily stand-up summary. It should check recent git commits,
+open pull requests by the current user, and today's calendar if WorkIQ
+is available. Format the output as Yesterday / Today / Blockers.
 ```
 
-```
-Use skill-creator to build a skill for generating release notes from commit history
-```
+The skill-creator will:
+
+1. **Ask clarifying questions** if it needs more detail
+2. **Generate a `SKILL.md` file** with proper frontmatter and step-by-step instructions
+3. **Save it** to `.github/skills/standup-prep/SKILL.md`
+
+That's it — your skill is ready to use.
+
+---
+
+## Try Your New Skill
+
+Test it by asking Copilot a natural question:
 
 ```
-Draft a skill for onboarding new team members to our codebase
+What did I work on yesterday?
 ```
 
-### Automatic Skill Discovery with `/skill`
+Copilot detects the `standup-prep` skill from its description and follows the instructions automatically. If it doesn't trigger, refine the description:
 
-You don't always need to name a skill explicitly. In Copilot CLI, type `/skill` and Copilot will scan your installed skills and suggest the most relevant one for your current task. This is useful when you've installed several skills and aren't sure which one applies — just describe what you want to do and let Copilot match it.
+```
+Use the skill-creator to improve the description of my standup-prep
+skill so it triggers when I ask about daily status or what I did yesterday.
+```
+
+---
+
+## More Skill Ideas
+
+Here are a few more skills worth creating:
+
+- **`debug-ci`** — Diagnose failing GitHub Actions workflows by pulling logs and summarizing errors
+- **`pr-review-checklist`** — Run through your team's code review checklist on a pull request diff
+- **`format-release-notes`** — Generate release notes from merged PRs since the last tag
+
+For each one, just describe what you want in plain English and let the skill-creator handle the rest.
 
 ---
 
 ## Organizing Your Skills
 
-Before you install a dozen skills, it's worth thinking about **where** they should live:
-
-- **Global skills** (`~/.copilot/skills/`) — Always available, in every project. Install with the `-g` flag. Great for personal productivity skills like daily standup prep, code review checklists, or your own debugging workflow.
-- **Project skills** (`.github/skills/`) — Travel with the repo. When a teammate clones the project, they get these skills automatically. Use for team-specific workflows, project coding standards, or CI/CD debugging tied to that pipeline.
-
-**A good rule of thumb:** *"Would I use this in every repo?"* → Global. *"Is this specific to how this team/project works?"* → Project.
+Before you install a dozen skills, think about **where** they should live:
 
 | Where | Path | Best for | Install flag |
 |:------|:-----|:---------|:-------------|
-| Global | `~/.copilot/skills/` | Personal productivity, always available | `npx skills add ... -g` |
-| Project | `.github/skills/` | Team workflows, shared via Git | `npx skills add ...` (default) |
+| **Global** | `~/.copilot/skills/` | Personal productivity, always available | `npx skills add ... -g` |
+| **Project** | `.github/skills/` | Team workflows, shared via Git | `npx skills add ...` (default) |
 
-Deciding early saves you from reorganizing later — and keeps your team's skill setup clean and predictable.
+**Rule of thumb:** *"Would I use this in every repo?"* → Global. *"Is this specific to this team/project?"* → Project.
+
+{: .note }
+> Skills created at the project level travel with the repo — when a colleague clones it, they automatically get your team's skills.
 
 ---
 
 ## Explore More Skills
 
-Browse and install additional skills:
-
 ```bash
 # List available skills in a repository
 npx skills add anthropics/skills --list
 
-# Install a specific skill
-npx skills add anthropics/skills --skill frontend-design
-
 # Install globally (available across all projects)
-npx skills add anthropics/skills --skill skill-creator -g
+npx skills add anthropics/skills --skill pptx -g
 
 # Search for skills
 npx skills find "code review"
 ```
 
-### Popular Skills to Try
-
-| Skill | What It Does |
-|:------|:-------------|
-| `skill-creator` | Helps you create new skills (you just installed this!) |
-| `frontend-design` | Guides frontend UI/UX implementation |
-| `git-explore` | Deep-dives into repos and produces documentation |
-| `code-review` | Reviews code changes for bugs and security issues |
-
 {: .tip }
-> Skills are placed in your `.github/skills/` directory by default. Copilot auto-detects and loads them when relevant to your tasks. Global skills (installed with `-g`) go to `~/.copilot/skills/` and are available in all projects.
-
----
-
-{: .tip }
-> **🎯 Try it yourself:** Install the `skill-creator` skill, then ask Copilot: *"Use the skill-creator to build a skill that summarizes a GitHub repository's README and lists its key dependencies."* Review the generated `SKILL.md` file and see how it's structured.
+> **🎯 Try it yourself:** Use the skill-creator to build a `standup-prep` skill, then test it by asking Copilot: *"What did I work on yesterday?"*
 
 > **References:** [About agent skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills) · [Skills CLI](https://github.com/vercel-labs/skills) · [skills.sh marketplace](https://skills.sh)
 
 ---
 
-[← Previous: Integrate Obsidian]({{ site.baseurl }}/docs/03-obsidian-integration){: .btn .mr-2 }
-[Next: Create Custom Skills →]({{ site.baseurl }}/docs/05-custom-skills){: .btn .btn-primary }
+[← Previous: Markdown Notebook]({{ site.baseurl }}/docs/03-obsidian-integration){: .btn .mr-2 }
+[Next: Voice Prompting with Handy →]({{ site.baseurl }}/docs/05-voice-prompting){: .btn .btn-primary }
