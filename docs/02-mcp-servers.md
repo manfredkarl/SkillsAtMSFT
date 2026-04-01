@@ -90,6 +90,43 @@ After configuration, Copilot can query your Microsoft 365 context. Try prompts l
 
 > **References:** [WorkIQ CLI overview](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/workiq-overview) · [WorkIQ MCP README](https://github.com/microsoft/work-iq-mcp)
 
+### Power Prompts
+
+Once WorkIQ is connected, the real magic begins. These prompts show what's possible when Copilot has full access to your M365 data — emails, Teams, calendar, and files working together.
+
+**"What did I miss?"**
+
+```
+Pull everything from my emails, Teams messages, and calendar from the 
+last 2 business days. Identify the top 5 things that need my attention — 
+action items assigned to me, decisions waiting on me, meetings I need to 
+prep for, and anything urgent.
+```
+
+Copilot triages across all your communication channels at once — no more switching between Outlook, Teams, and Calendar to piece together what happened while you were out.
+
+**Account 360**
+
+```
+Pick my most-mentioned customer from the last week of emails and Teams 
+messages. Then do a full 360: pull every internal thread, email, and 
+meeting note about them, research their latest news, and generate a 
+briefing with our engagement history and recommended next steps.
+```
+
+One prompt replaces 30 minutes of manual research. You get a complete customer briefing — engagement history, open threads, and actionable next steps — ready to share with your team.
+
+**Meeting prep on autopilot**
+
+```
+Look at my calendar for the next 2 business days. For each external 
+customer meeting, pull the last 5 email and Teams exchanges with that 
+customer, summarize what we've discussed recently, identify any open 
+action items, and generate a prep doc with talking points for each meeting.
+```
+
+Walk into every customer meeting fully briefed. Copilot cross-references your calendar with your communication history and builds personalized prep docs automatically.
+
 ---
 
 ## MSX CRM (Dynamics 365)

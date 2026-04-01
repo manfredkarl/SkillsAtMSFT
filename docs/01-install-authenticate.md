@@ -28,9 +28,29 @@ Before you begin, make sure you have the following ready:
 
 ---
 
+## Link Your GitHub Account to Microsoft
+
+To use Copilot CLI under the Microsoft enterprise license, your GitHub account must be linked to your Microsoft identity.
+
+1. **Need a GitHub account?** Create one at [github.com/signup](https://github.com/signup).
+2. **Link your @microsoft.com identity** — Follow Microsoft's internal instructions to associate your GitHub account with your corporate identity. This grants access to Copilot under the enterprise agreement.
+3. **Already linked?** Skip this step and move on to installation.
+
+{: .note }
+> If you're unsure whether your account is linked, check [github.com/settings/copilot](https://github.com/settings/copilot) — you should see your enterprise subscription listed.
+
+---
+
 ## Install the CLI
 
 ### Windows
+
+{: .tip }
+> **Before you install, make sure you have these:**
+> - ✅ **Windows Terminal** — [Download here](https://aka.ms/terminal) (modern tabbed terminal, highly recommended)
+> - ✅ **PowerShell 7** — *Not* the built-in Windows PowerShell 5.1. Install: `winget install Microsoft.PowerShell`. Verify: `$PSVersionTable.PSVersion` should show 7.x+
+> - ✅ **Git** — [git-scm.com](https://git-scm.com) if not already installed
+> - ✅ **Node.js 22+** — [nodejs.org](https://nodejs.org/) (LTS version)
 
 Install using **npm** (recommended) or **winget**:
 
@@ -76,6 +96,22 @@ brew install copilot-cli
 
 ---
 
+## Set Up Your Working Folder
+
+Before authenticating, create a dedicated folder for your Copilot CLI work:
+
+```powershell
+mkdir ~/OneDrive/ghcli-working
+cd ~/OneDrive/ghcli-working
+```
+
+This is the directory you'll launch Copilot from — it becomes your workspace. Any files, reports, or artifacts Copilot creates will land here.
+
+{: .tip }
+> The more relevant material you put in this folder (docs, notes, data files, CSVs), the more Copilot can reference and work with. Think of it as Copilot's desk.
+
+---
+
 ## Authenticate
 
 Run Copilot in your terminal:
@@ -112,6 +148,21 @@ This is equivalent to `--allow-all-tools --allow-all-paths --allow-all-urls`, le
 
 ---
 
+## Select Your Model
+
+Once inside Copilot CLI, choose the model that powers your interactions:
+
+```
+/model
+```
+
+This shows all available models. We recommend selecting **Claude Opus 4.6** for the most capable reasoning and highest-quality output. Other options include Claude Sonnet (faster, lighter) and GPT-5 variants.
+
+{: .tip }
+> Model choice makes a real difference in output quality — especially for complex analysis, writing, and multi-step tasks. Start with Opus and adjust if you need faster responses.
+
+---
+
 ## Managing Sessions
 
 Copilot CLI saves your conversation history as **sessions**, so you can pick up where you left off.
@@ -144,6 +195,15 @@ This makes it easy to find later in the session picker.
 | `/compact` | Summarize conversation to free up context window |
 | `/share` | Export session to markdown or GitHub Gist |
 | `/clear` | Abandon session and start fresh |
+
+---
+
+## Tips for Getting the Most Out of It
+
+- **Use `@` to reference files** — Type `@` followed by a filename to include its contents in your prompt. Great for feeding data, CSVs, transcripts, or reusable prompts.
+- **Ask for file output** — End any prompt with *"save this as a well-formatted HTML file"* and you'll get a polished document in your working folder. Open it in your browser.
+- **Iterate instantly** — Don't like the output? Just say *"make this better"* or *"add a chart"* or *"make this more executive-ready."* Copilot refines in place.
+- **Build a prompt library** — Ask Copilot to *"create a reusable prompt file that does [X] and save it as a markdown file."* Then reference it anytime with `@filename.md`.
 
 ---
 
