@@ -29,7 +29,7 @@ When you ask Copilot to do something, it checks all installed skills and automat
 
 ## Install the Skill Creator
 
-As your first skill, add the **Skill Creator** — a meta-skill that helps you build new skills. In your terminal, run:
+As your first skill, add the **Skill Creator** — a meta-skill that helps you build new skills. Run this in your terminal or paste it directly into GitHub Copilot CLI:
 
 ```bash
 npx skills add anthropics/skills --skill skill-creator
