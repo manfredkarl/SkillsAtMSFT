@@ -139,85 +139,115 @@ Once configured, Copilot can query and update your CRM data with prompts like:
 - *"What's the latest activity on the Contoso account?"*
 - *"Update the revenue estimate for opportunity OPP-1234 to $500K"*
 
----
-
-## Full MCP Configuration
-
-Below is a complete `.vscode/mcp.json` you can drop into your repo root. It includes all the servers we've covered plus additional Agent365 connectors for Mail, Teams, Calendar, Word, and SharePoint.
-
 ```json
-{
-  "servers": {
-    "workiq": {
-      "command": "npx",
-      "args": ["-y", "@microsoft/workiq", "mcp"],
-      "type": "stdio"
-    },
-    "msx-crm": {
-      "type": "stdio",
-      "command": "node",
-      "args": ["mcp/msx/src/index.js"],
-      "env": {
-        "MSX_CRM_URL": "https://microsoftsales.crm.dynamics.com",
-        "MSX_TENANT_ID": "${input:tenant_id}"
-      }
-    },
-    "oil": {
-      "type": "stdio",
-      "command": "node",
-      "args": ["scripts/oil-start.js"]
-    },
-    "powerbi-remote": {
-      "type": "http",
-      "url": "https://api.fabric.microsoft.com/v1/mcp/powerbi"
-    },
-    "agent365-mail": {
-      "type": "http",
-      "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_MailTools"
-    },
-    "agent365-teamsserver": {
-      "type": "http",
-      "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_TeamsServer"
-    },
-    "agent365-calendartools": {
-      "type": "http",
-      "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_CalendarTools"
-    },
-    "agent365-wordserver": {
-      "type": "http",
-      "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_WordServer"
-    },
-    "agent365-sharepoint": {
-      "type": "http",
-      "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_ODSPRemoteServer"
-    }
-  },
-  "inputs": [
-    {
-      "id": "tenant_id",
-      "type": "promptString",
-      "description": "Microsoft Entra tenant ID (GUID)"
-    }
-  ]
+"msx-crm": {
+  "type": "stdio",
+  "command": "node",
+  "args": ["mcp/msx/src/index.js"],
+  "env": {
+    "MSX_CRM_URL": "https://microsoftsales.crm.dynamics.com",
+    "MSX_TENANT_ID": "${input:tenant_id}"
+  }
 }
 ```
 
-### Servers Included
+---
 
-| Server | What it does |
-|:-------|:-------------|
-| **WorkIQ** | M365 content search (meetings, chats, email, SharePoint) |
-| **MSX-CRM** | Dynamics 365 CRM read/write operations |
-| **OIL** | Obsidian Intelligence Layer (local knowledge vault) |
-| **Power BI Remote** | Fabric/Power BI semantic model queries |
-| **Agent365 Mail** | Send/receive email via Graph |
-| **Agent365 Teams** | Teams messaging and chat |
-| **Agent365 Calendar** | Calendar and meeting management |
-| **Agent365 Word** | Word document operations |
-| **Agent365 SharePoint** | SharePoint/OneDrive file operations |
+## Power BI (Remote MCP)
+
+Query your Power BI semantic models using plain English. Ask questions about revenue, trends, KPIs — Copilot translates your question into DAX and returns the answer.
+
+- *"What was total revenue by region last quarter?"*
+- *"Show me the trend of customer churn over the past 12 months"*
+
+```json
+"powerbi-remote": {
+  "type": "http",
+  "url": "https://api.fabric.microsoft.com/v1/mcp/powerbi"
+}
+```
 
 {: .note }
-> **Setup:** Place this as `.vscode/mcp.json` in your repo root. The `tenant_id` input will prompt you on first use — use your corporate Microsoft Entra tenant GUID.
+> You need access to at least one Power BI workspace and semantic model. Authenticates via your Microsoft Entra credentials.
+
+---
+
+## Further Helpful MSFT-Internal MCP Servers
+
+These Agent365 servers give Copilot direct access to Microsoft 365 services via Microsoft Graph. They work for all Microsoft employees.
+
+### Agent365 Mail
+
+Send, receive, and search emails directly from Copilot. Great for drafting responses, summarizing threads, or finding attachments.
+
+- *"Draft a reply to the latest email from Sarah about the Q2 budget"*
+- *"Find all emails with attachments from last week"*
+
+```json
+"agent365-mail": {
+  "type": "http",
+  "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_MailTools"
+}
+```
+
+### Agent365 Teams
+
+Read and send Teams messages. Useful for catching up on channels or posting updates.
+
+- *"Summarize what was discussed in the #project-alpha channel today"*
+- *"Post a status update to my team's general channel"*
+
+```json
+"agent365-teamsserver": {
+  "type": "http",
+  "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_TeamsServer"
+}
+```
+
+### Agent365 Calendar
+
+Manage your calendar — check availability, create meetings, and review upcoming events.
+
+- *"What's my schedule for tomorrow?"*
+- *"Find a 30-minute slot with Jessica and Tom next week"*
+
+```json
+"agent365-calendartools": {
+  "type": "http",
+  "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_CalendarTools"
+}
+```
+
+### Agent365 Word
+
+Read and work with Word documents stored in OneDrive or SharePoint.
+
+- *"Summarize the executive summary from the Q1 strategy doc"*
+- *"Extract the action items from the meeting minutes document"*
+
+```json
+"agent365-wordserver": {
+  "type": "http",
+  "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_WordServer"
+}
+```
+
+### Agent365 SharePoint
+
+Access files and content from SharePoint and OneDrive — search, read, and organize.
+
+- *"Find the latest version of the partner onboarding deck on SharePoint"*
+- *"List all files in our team's shared project folder"*
+
+```json
+"agent365-sharepoint": {
+  "type": "http",
+  "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_ODSPRemoteServer"
+}
+```
+
+{: .note }
+> **Setup:** Add these to `.vscode/mcp.json` in your repo root. The `tenant_id` input will prompt you on first use — use your corporate Microsoft Entra tenant GUID.
 
 ---
 
