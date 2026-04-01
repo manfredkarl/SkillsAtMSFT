@@ -185,6 +185,13 @@ Query your Power BI semantic models using plain English. Ask questions about rev
 These Agent365 servers give Copilot direct access to Microsoft 365 services via Microsoft Graph. They work for all Microsoft employees.
 
 {: .note }
+> **WorkIQ vs Agent365 — what's the difference?**
+>
+> **WorkIQ** is great for **searching and reading** across all your M365 data in one go — emails, Teams, calendar, SharePoint. If you just need to find or summarize information, WorkIQ is all you need.
+>
+> **Agent365** servers add **direct actions** on individual services — sending emails, posting in Teams, creating calendar events, editing Word docs. If you want Copilot to *do things* (not just read), add the Agent365 servers you need.
+
+{: .tip }
 > **Setup:** Add any of these to `.vscode/mcp.json` in your repo root. The `tenant_id` input will prompt you on first use — use your corporate Microsoft Entra tenant GUID.
 
 ---
