@@ -52,7 +52,7 @@ To use Copilot CLI under the Microsoft enterprise license, your GitHub account m
 > - ✅ **Git** — [git-scm.com](https://git-scm.com) if not already installed
 > - ✅ **Node.js 22+** — [nodejs.org](https://nodejs.org/) (LTS version)
 
-Install using **npm** (recommended) or **winget**:
+Open **Windows Terminal** (or PowerShell 7) and install using **npm** (recommended) or **winget**:
 
 ```powershell
 npm install -g @github/copilot
@@ -70,7 +70,7 @@ winget install GitHub.Copilot
 
 ### macOS/Linux
 
-Install using **npm** (recommended) or **Homebrew**:
+Open your terminal and install using **npm** (recommended) or **Homebrew**:
 
 ```bash
 npm install -g @github/copilot
@@ -93,22 +93,6 @@ brew install copilot-cli
 > - **`copilot` command not found?** Make sure your global npm `bin` directory is in your `PATH`. Run `npm config get prefix` to find it.
 > - **Permission errors on macOS/Linux?** Avoid `sudo npm install -g`. Instead, [fix your npm permissions](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) or use `nvm`.
 > - **Behind a corporate proxy?** Set `HTTP_PROXY` and `HTTPS_PROXY` environment variables before installing.
-
----
-
-## Set Up Your Working Folder
-
-Before authenticating, create a dedicated folder for your Copilot CLI work:
-
-```powershell
-mkdir ~/OneDrive/ghcli-working
-cd ~/OneDrive/ghcli-working
-```
-
-This is the directory you'll launch Copilot from — it becomes your workspace. Any files, reports, or artifacts Copilot creates will land here.
-
-{: .tip }
-> The more relevant material you put in this folder (docs, notes, data files, CSVs), the more Copilot can reference and work with. Think of it as Copilot's desk.
 
 ---
 
