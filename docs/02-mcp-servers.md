@@ -140,13 +140,17 @@ Once configured, Copilot can query and update your CRM data with prompts like:
 - *"Update the revenue estimate for opportunity OPP-1234 to $500K"*
 
 ```json
-"msx-crm": {
-  "type": "stdio",
-  "command": "node",
-  "args": ["mcp/msx/src/index.js"],
-  "env": {
-    "MSX_CRM_URL": "https://microsoftsales.crm.dynamics.com",
-    "MSX_TENANT_ID": "${input:tenant_id}"
+{
+  "servers": {
+    "msx-crm": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["mcp/msx/src/index.js"],
+      "env": {
+        "MSX_CRM_URL": "https://microsoftsales.crm.dynamics.com",
+        "MSX_TENANT_ID": "${input:tenant_id}"
+      }
+    }
   }
 }
 ```
@@ -161,9 +165,13 @@ Query your Power BI semantic models using plain English. Ask questions about rev
 - *"Show me the trend of customer churn over the past 12 months"*
 
 ```json
-"powerbi-remote": {
-  "type": "http",
-  "url": "https://api.fabric.microsoft.com/v1/mcp/powerbi"
+{
+  "servers": {
+    "powerbi-remote": {
+      "type": "http",
+      "url": "https://api.fabric.microsoft.com/v1/mcp/powerbi"
+    }
+  }
 }
 ```
 
@@ -189,9 +197,13 @@ Send, receive, and search emails directly from Copilot. Great for drafting respo
 - *"Find all emails with attachments from last week"*
 
 ```json
-"agent365-mail": {
-  "type": "http",
-  "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_MailTools"
+{
+  "servers": {
+    "agent365-mail": {
+      "type": "http",
+      "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_MailTools"
+    }
+  }
 }
 ```
 
@@ -205,9 +217,13 @@ Read and send Teams messages. Useful for catching up on channels you missed or p
 - *"Post a status update to my team's general channel"*
 
 ```json
-"agent365-teamsserver": {
-  "type": "http",
-  "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_TeamsServer"
+{
+  "servers": {
+    "agent365-teamsserver": {
+      "type": "http",
+      "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_TeamsServer"
+    }
+  }
 }
 ```
 
@@ -221,9 +237,13 @@ Manage your calendar — check availability, create meetings, and review upcomin
 - *"Find a 30-minute slot with Jessica and Tom next week"*
 
 ```json
-"agent365-calendartools": {
-  "type": "http",
-  "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_CalendarTools"
+{
+  "servers": {
+    "agent365-calendartools": {
+      "type": "http",
+      "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_CalendarTools"
+    }
+  }
 }
 ```
 
@@ -237,9 +257,13 @@ Read and work with Word documents stored in OneDrive or SharePoint. Let Copilot 
 - *"Extract the action items from the meeting minutes document"*
 
 ```json
-"agent365-wordserver": {
-  "type": "http",
-  "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_WordServer"
+{
+  "servers": {
+    "agent365-wordserver": {
+      "type": "http",
+      "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_WordServer"
+    }
+  }
 }
 ```
 
@@ -253,9 +277,13 @@ Access files and content from SharePoint and OneDrive — search across your org
 - *"List all files in our team's shared project folder"*
 
 ```json
-"agent365-sharepoint": {
-  "type": "http",
-  "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_ODSPRemoteServer"
+{
+  "servers": {
+    "agent365-sharepoint": {
+      "type": "http",
+      "url": "https://agent365.svc.cloud.microsoft/agents/tenants/${input:tenant_id}/servers/mcp_ODSPRemoteServer"
+    }
+  }
 }
 ```
 
