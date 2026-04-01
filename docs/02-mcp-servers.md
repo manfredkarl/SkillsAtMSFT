@@ -13,13 +13,13 @@ Enhance Copilot CLI by connecting to Model Context Protocol (MCP) servers that e
 
 ⏱️ **Estimated time: 10–15 minutes**
 
-MCP servers are what transform Copilot CLI from a code assistant into a full enterprise productivity tool. In this module you'll connect Copilot to your Microsoft 365 data, CRM system, and Power BI reports — giving it real-time context about your work, customers, and analytics.
+MCP servers are what transform Copilot CLI from a code assistant into a full enterprise productivity tool. In this module you'll connect Copilot to your Microsoft 365 data, CRM system, and Power BI reports - giving it real-time context about your work, customers, and analytics.
 
 ---
 
 ## What is MCP?
 
-The [Model Context Protocol](https://modelcontextprotocol.io/) (MCP) is an open standard that lets AI assistants connect to external data sources and tools. Think of MCP servers as **plugins** that give Copilot new abilities — each server exposes a set of tools that Copilot can call on your behalf.
+The [Model Context Protocol](https://modelcontextprotocol.io/) (MCP) is an open standard that lets AI assistants connect to external data sources and tools. Think of MCP servers as **plugins** that give Copilot new abilities - each server exposes a set of tools that Copilot can call on your behalf.
 
 There are two types of MCP connections:
 
@@ -92,18 +92,18 @@ After configuration, Copilot can query your Microsoft 365 context. Try prompts l
 
 ### Power Prompts
 
-Once WorkIQ is connected, the real magic begins. These prompts show what's possible when Copilot has full access to your M365 data — emails, Teams, calendar, and files working together.
+Once WorkIQ is connected, the real magic begins. These prompts show what's possible when Copilot has full access to your M365 data - emails, Teams, calendar, and files working together.
 
 **"What did I miss?"**
 
 ```
 Pull everything from my emails, Teams messages, and calendar from the 
-last 2 business days. Identify the top 5 things that need my attention — 
+last 2 business days. Identify the top 5 things that need my attention - 
 action items assigned to me, decisions waiting on me, meetings I need to 
 prep for, and anything urgent.
 ```
 
-Copilot triages across all your communication channels at once — no more switching between Outlook, Teams, and Calendar to piece together what happened while you were out.
+Copilot triages across all your communication channels at once - no more switching between Outlook, Teams, and Calendar to piece together what happened while you were out.
 
 **Account 360**
 
@@ -114,7 +114,7 @@ meeting note about them, research their latest news, and generate a
 briefing with our engagement history and recommended next steps.
 ```
 
-One prompt replaces 30 minutes of manual research. You get a complete customer briefing — engagement history, open threads, and actionable next steps — ready to share with your team.
+One prompt replaces 30 minutes of manual research. You get a complete customer briefing - engagement history, open threads, and actionable next steps - ready to share with your team.
 
 **Meeting prep on autopilot**
 
@@ -131,7 +131,7 @@ Walk into every customer meeting fully briefed. Copilot cross-references your ca
 
 ## MSX CRM (Dynamics 365)
 
-The MSX CRM server connects Copilot to Dynamics 365 — giving it access to accounts, opportunities, activities, and pipeline data from Microsoft Sales Experience.
+The MSX CRM server connects Copilot to Dynamics 365 - giving it access to accounts, opportunities, activities, and pipeline data from Microsoft Sales Experience.
 
 Once configured, Copilot can query and update your CRM data with prompts like:
 
@@ -159,7 +159,7 @@ Once configured, Copilot can query and update your CRM data with prompts like:
 
 ## Power BI (Remote MCP)
 
-Query your Power BI semantic models using plain English. Ask questions about revenue, trends, KPIs — Copilot translates your question into DAX and returns the answer.
+Query your Power BI semantic models using plain English. Ask questions about revenue, trends, KPIs - Copilot translates your question into DAX and returns the answer.
 
 - *"What was total revenue by region last quarter?"*
 - *"Show me the trend of customer churn over the past 12 months"*
@@ -185,14 +185,14 @@ Query your Power BI semantic models using plain English. Ask questions about rev
 These Agent365 servers give Copilot direct access to Microsoft 365 services via Microsoft Graph. They work for all Microsoft employees.
 
 {: .note }
-> **WorkIQ vs Agent365 — what's the difference?**
+> **WorkIQ vs Agent365 - what's the difference?**
 >
-> **WorkIQ** is great for **searching and reading** across all your M365 data in one go — emails, Teams, calendar, SharePoint. If you just need to find or summarize information, WorkIQ is all you need.
+> **WorkIQ** is great for **searching and reading** across all your M365 data in one go - emails, Teams, calendar, SharePoint. If you just need to find or summarize information, WorkIQ is all you need.
 >
-> **Agent365** servers add **direct actions** on individual services — sending emails, posting in Teams, creating calendar events, editing Word docs. If you want Copilot to *do things* (not just read), add the Agent365 servers you need.
+> **Agent365** servers add **direct actions** on individual services - sending emails, posting in Teams, creating calendar events, editing Word docs. If you want Copilot to *do things* (not just read), add the Agent365 servers you need.
 
 {: .tip }
-> **Setup:** Add any of these to `.vscode/mcp.json` in your repo root. The `tenant_id` input will prompt you on first use — use your corporate Microsoft Entra tenant GUID.
+> **Setup:** Add any of these to `.vscode/mcp.json` in your repo root. The `tenant_id` input will prompt you on first use - use your corporate Microsoft Entra tenant GUID.
 
 ---
 
@@ -238,7 +238,7 @@ Read and send Teams messages. Useful for catching up on channels you missed or p
 
 ### 📅 Agent365 Calendar
 
-Manage your calendar — check availability, create meetings, and review upcoming events. Especially powerful combined with WorkIQ for automated meeting prep.
+Manage your calendar - check availability, create meetings, and review upcoming events. Especially powerful combined with WorkIQ for automated meeting prep.
 
 - *"What's my schedule for tomorrow?"*
 - *"Find a 30-minute slot with Jessica and Tom next week"*
@@ -278,7 +278,7 @@ Read and work with Word documents stored in OneDrive or SharePoint. Let Copilot 
 
 ### 📂 Agent365 SharePoint
 
-Access files and content from SharePoint and OneDrive — search across your org's shared resources, find documents, and browse folder structures.
+Access files and content from SharePoint and OneDrive - search across your org's shared resources, find documents, and browse folder structures.
 
 - *"Find the latest version of the partner onboarding deck on SharePoint"*
 - *"List all files in our team's shared project folder"*

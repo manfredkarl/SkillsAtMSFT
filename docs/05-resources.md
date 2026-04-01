@@ -31,7 +31,7 @@ The open agent skills marketplace. Browse, search, and install community-contrib
 
 ### Microsoft: Awesome Copilot Skills
 
-A curated list of skills specifically designed for GitHub Copilot — from code review to CI/CD debugging to Azure workflows.
+A curated list of skills specifically designed for GitHub Copilot - from code review to CI/CD debugging to Azure workflows.
 
 🔗 [github.com/github/awesome-copilot/skills](https://github.com/github/awesome-copilot/tree/main/skills/)
 
@@ -47,7 +47,7 @@ Microsoft's official skills repository with enterprise-focused skills for Azure,
 
 ### Microsoft: Copilot for Azure
 
-A large collection of Azure-specific skills — infrastructure provisioning, resource management, cost optimization, and more. One of the most popular skill sets on skills.sh.
+A large collection of Azure-specific skills - infrastructure provisioning, resource management, cost optimization, and more. One of the most popular skill sets on skills.sh.
 
 🔗 [github.com/microsoft/github-copilot-for-azure](https://github.com/microsoft/github-copilot-for-azure)
 

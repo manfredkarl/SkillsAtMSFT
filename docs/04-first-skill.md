@@ -3,7 +3,7 @@ title: 4. Agent Skills
 nav_order: 4
 ---
 
-# Agent Skills — Install & Create
+# Agent Skills - Install & Create
 {: .fs-8 }
 
 Install the skill-creator, then use it right away to build your first custom skill.
@@ -17,7 +17,7 @@ Skills are what make Copilot truly customizable. Instead of writing the same com
 
 ## What Are Agent Skills?
 
-Skills are structured instruction files that give Copilot domain-specific capabilities. Think of them as **expert playbooks** — each skill teaches Copilot a specific workflow. They can be:
+Skills are structured instruction files that give Copilot domain-specific capabilities. Think of them as **expert playbooks** - each skill teaches Copilot a specific workflow. They can be:
 
 - **Installed from the community** via [skills.sh](https://skills.sh)
 - **Created custom** for your team using the skill-creator
@@ -50,7 +50,7 @@ You should see `skill-creator` in the list. You can also type `/skill` and Copil
 
 ## Create Your First Skill
 
-Now let's use the skill-creator right away. Here's a practical example — creating a skill that prepares daily stand-up summaries:
+Now let's use the skill-creator right away. Here's a practical example - creating a skill that prepares daily stand-up summaries:
 
 ```
 Use the skill-creator to create a new skill called "standup-prep" that
@@ -65,7 +65,7 @@ The skill-creator will:
 2. **Generate a `SKILL.md` file** with proper frontmatter and step-by-step instructions
 3. **Save it** to `.github/skills/standup-prep/SKILL.md`
 
-That's it — your skill is ready to use.
+That's it - your skill is ready to use.
 
 ---
 
@@ -90,9 +90,9 @@ skill so it triggers when I ask about daily status or what I did yesterday.
 
 Here are a few more skills worth creating:
 
-- **`debug-ci`** — Diagnose failing GitHub Actions workflows by pulling logs and summarizing errors
-- **`pr-review-checklist`** — Run through your team's code review checklist on a pull request diff
-- **`format-release-notes`** — Generate release notes from merged PRs since the last tag
+- **`debug-ci`** - Diagnose failing GitHub Actions workflows by pulling logs and summarizing errors
+- **`pr-review-checklist`** - Run through your team's code review checklist on a pull request diff
+- **`format-release-notes`** - Generate release notes from merged PRs since the last tag
 
 For each one, just describe what you want in plain English and let the skill-creator handle the rest.
 
@@ -110,7 +110,7 @@ Before you install a dozen skills, think about **where** they should live:
 **Rule of thumb:** *"Would I use this in every repo?"* → Global. *"Is this specific to this team/project?"* → Project.
 
 {: .note }
-> Skills created at the project level travel with the repo — when a colleague clones it, they automatically get your team's skills.
+> Skills created at the project level travel with the repo - when a colleague clones it, they automatically get your team's skills.
 
 ---
 

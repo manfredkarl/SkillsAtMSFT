@@ -11,7 +11,7 @@ Get Copilot CLI installed and authenticated in under 5 minutes.
 
 ⏱️ **Estimated time: 5–10 minutes**
 
-In this module you'll install the Copilot CLI, authenticate with your GitHub account, and verify everything works. This is the foundation for every module that follows — once you're authenticated, all the advanced features (MCP servers, skills, voice prompting) become available.
+In this module you'll install the Copilot CLI, authenticate with your GitHub account, and verify everything works. This is the foundation for every module that follows - once you're authenticated, all the advanced features (MCP servers, skills, voice prompting) become available.
 
 ---
 
@@ -19,7 +19,7 @@ In this module you'll install the Copilot CLI, authenticate with your GitHub acc
 
 Before you begin, make sure you have the following ready:
 
-- **Node.js 22+** — [Download here](https://nodejs.org/). Run `node --version` to check your current version.
+- **Node.js 22+** - [Download here](https://nodejs.org/). Run `node --version` to check your current version.
 - **GitHub account** with a Copilot subscription (Pro, Pro+, Business, or Enterprise)
 - **PowerShell v6+** (Windows) or any modern terminal (macOS/Linux)
 
@@ -33,11 +33,11 @@ Before you begin, make sure you have the following ready:
 To use Copilot CLI under the Microsoft enterprise license, your GitHub account must be linked to your Microsoft identity.
 
 1. **Need a GitHub account?** Create one at [github.com/signup](https://github.com/signup).
-2. **Link your @microsoft.com identity** — Follow Microsoft's internal instructions to associate your GitHub account with your corporate identity. This grants access to Copilot under the enterprise agreement.
+2. **Link your @microsoft.com identity** - Follow Microsoft's internal instructions to associate your GitHub account with your corporate identity. This grants access to Copilot under the enterprise agreement.
 3. **Already linked?** Skip this step and move on to installation.
 
 {: .note }
-> If you're unsure whether your account is linked, check [github.com/settings/copilot](https://github.com/settings/copilot) — you should see your enterprise subscription listed.
+> If you're unsure whether your account is linked, check [github.com/settings/copilot](https://github.com/settings/copilot) - you should see your enterprise subscription listed.
 
 ---
 
@@ -47,10 +47,10 @@ To use Copilot CLI under the Microsoft enterprise license, your GitHub account m
 
 {: .tip }
 > **Before you install, make sure you have these:**
-> - ✅ **Windows Terminal** — [Download here](https://aka.ms/terminal) (modern tabbed terminal, highly recommended)
-> - ✅ **PowerShell 7** — *Not* the built-in Windows PowerShell 5.1. Install: `winget install Microsoft.PowerShell`. Verify: `$PSVersionTable.PSVersion` should show 7.x+
-> - ✅ **Git** — [git-scm.com](https://git-scm.com) if not already installed
-> - ✅ **Node.js 22+** — [nodejs.org](https://nodejs.org/) (LTS version)
+> - ✅ **Windows Terminal** - [Download here](https://aka.ms/terminal) (modern tabbed terminal, highly recommended)
+> - ✅ **PowerShell 7** - *Not* the built-in Windows PowerShell 5.1. Install: `winget install Microsoft.PowerShell`. Verify: `$PSVersionTable.PSVersion` should show 7.x+
+> - ✅ **Git** - [git-scm.com](https://git-scm.com) if not already installed
+> - ✅ **Node.js 22+** - [nodejs.org](https://nodejs.org/) (LTS version)
 
 Open **Windows Terminal** (or PowerShell 7) and install using **npm** (recommended) or **winget**:
 
@@ -106,9 +106,9 @@ copilot
 
 On first launch, the CLI will prompt you to log in with your GitHub account:
 
-1. **Device code flow** — The CLI displays a one-time code and opens your browser to [github.com/login/device](https://github.com/login/device). Enter the code and authorize the app.
-2. **Workspace trust** — Copilot will ask you to confirm that you trust the current workspace. Approve to allow file access.
-3. **Ready to go** — You'll see a welcome message confirming you're logged in. You can start prompting immediately.
+1. **Device code flow** - The CLI displays a one-time code and opens your browser to [github.com/login/device](https://github.com/login/device). Enter the code and authorize the app.
+2. **Workspace trust** - Copilot will ask you to confirm that you trust the current workspace. Approve to allow file access.
+3. **Ready to go** - You'll see a welcome message confirming you're logged in. You can start prompting immediately.
 
 ---
 
@@ -143,7 +143,7 @@ Once inside Copilot CLI, choose the model that powers your interactions:
 This shows all available models. We recommend selecting **Claude Opus 4.6** for the most capable reasoning and highest-quality output. Other options include Claude Sonnet (faster, lighter) and GPT-5 variants.
 
 {: .tip }
-> Model choice makes a real difference in output quality — especially for complex analysis, writing, and multi-step tasks. Start with Opus and adjust if you need faster responses.
+> Model choice makes a real difference in output quality - especially for complex analysis, writing, and multi-step tasks. Start with Opus and adjust if you need faster responses.
 
 ---
 
@@ -168,10 +168,10 @@ Copilot CLI saves your conversation history as **sessions** and has handy slash 
 
 ## Tips for Getting the Most Out of It
 
-- **Use `@` to reference files** — Type `@` followed by a filename to include its contents in your prompt. Great for feeding data, CSVs, transcripts, or reusable prompts.
-- **Ask for file output** — End any prompt with *"save this as a well-formatted HTML file"* and you'll get a polished document in your working folder. Open it in your browser.
-- **Iterate instantly** — Don't like the output? Just say *"make this better"* or *"add a chart"* or *"make this more executive-ready."* Copilot refines in place.
-- **Build a prompt library** — Ask Copilot to *"create a reusable prompt file that does [X] and save it as a markdown file."* Then reference it anytime with `@filename.md`.
+- **Use `@` to reference files** - Type `@` followed by a filename to include its contents in your prompt. Great for feeding data, CSVs, transcripts, or reusable prompts.
+- **Ask for file output** - End any prompt with *"save this as a well-formatted HTML file"* and you'll get a polished document in your working folder. Open it in your browser.
+- **Iterate instantly** - Don't like the output? Just say *"make this better"* or *"add a chart"* or *"make this more executive-ready."* Copilot refines in place.
+- **Build a prompt library** - Ask Copilot to *"create a reusable prompt file that does [X] and save it as a markdown file."* Then reference it anytime with `@filename.md`.
 
 ---
 

@@ -13,7 +13,7 @@ nav_order: 0
 ---
 
 {: .important }
-> **Prerequisites** — Before you begin, make sure you have:
+> **Prerequisites** - Before you begin, make sure you have:
 > - A **GitHub account** with Copilot access (Individual, Business, or Enterprise)
 > - **Node.js 22+** installed (`node --version`)
 > - A terminal you're comfortable with (PowerShell, Bash, or Zsh)
