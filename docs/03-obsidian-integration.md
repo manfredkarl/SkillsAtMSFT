@@ -1,19 +1,23 @@
 ---
-title: 3. Integrate Obsidian
+title: 3. .md Notetaking
 nav_order: 3
 ---
 
-# Using Copilot CLI with Obsidian
+# .md Notetaking
 {: .fs-8 }
 
-Your Obsidian vault is just a folder of markdown files — which means Copilot CLI can read, search, and write to it directly.
+Markdown-based notes are the perfect companion for Copilot CLI — and we recommend Obsidian as the tool to manage them.
 {: .fs-5 .fw-300 }
 
 ⏱️ **Estimated time: 5 minutes**
 
 ---
 
-## What Is Obsidian?
+## Why Markdown Notetaking?
+
+Copilot CLI works with files on your machine. If your notes are plain `.md` files in a folder, Copilot can read, search, create, and update them — no plugins, no APIs, no special integration. That's why we recommend a markdown-based notetaking app.
+
+## Why We Chose Obsidian
 
 [Obsidian](https://obsidian.md/) is a local-first markdown note-taking app. Your notes live in a **vault**, which is just a regular folder of `.md` files on your computer. No cloud account required, no proprietary format — just plain text files organized however you like.
 
