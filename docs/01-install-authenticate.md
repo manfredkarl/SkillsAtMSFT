@@ -19,9 +19,9 @@ In this module you'll install the Copilot CLI, authenticate with your GitHub acc
 
 Before you begin, make sure you have the following ready:
 
-- **Node.js 22+** - [Download here](https://nodejs.org/). Run `node --version` to check your current version.
-- **GitHub account** with a Copilot subscription (Pro, Pro+, Business, or Enterprise)
 - **PowerShell v6+** (Windows) or any modern terminal (macOS/Linux)
+- **GitHub account** with a Copilot subscription (Pro, Pro+, Business, or Enterprise)
+- **Node.js 22+** - [Download here](https://nodejs.org/). Run `node --version` to check your current version.
 
 {: .note }
 > **Not sure if you have Copilot access?** Visit [github.com/settings/copilot](https://github.com/settings/copilot) to check your subscription status. If your organization manages your license, ask your admin to confirm your seat assignment.
